@@ -1,0 +1,30 @@
+.content__country{
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    
+  }
+  
+  .content__county_list{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    box-sizing: border-box; 
+    align-items: center;
+    justify-content: space-around;
+    border: solid 1px red;
+    min-width: 600px;
+  }
+  
+  .countries__block_list{
+    padding: 5px;
+    box-sizing: border-box;
+    min-height: 50px;
+    min-width: 300px;
+    border: solid 1px;
+  
+  }

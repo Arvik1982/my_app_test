@@ -1,0 +1,69 @@
+.content__countries_list{
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px
+  }
+  
+  .filter__block{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .filter__block_button{
+    width: 150px;
+  }
+
+  .countries__list_element{
+    cursor: pointer;
+    border-radius: 6px;
+    min-width: 678px;
+    max-height: 400px;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-shadow: 0 7px 21px rgba(83, 92, 105, .12), 0 -1px 6px 0 rgba(83, 92, 105, .06);
+  }
+  .countries__list_element:hover{
+    box-shadow: 0 7px 21px rgba(227, 10, 10, 0.12), 0 -1px 6px 0 rgba(227, 10, 10, 0.12);
+  }
+
+  .list__element_container{    
+    padding-left: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    box-sizing: border-box;
+    min-height: 50px;
+    min-width: 300px;
+    cursor: pointer; 
+    
+  } 
+
+  .content__country_name{
+    width:320px;
+  }
+
+  .country__flag_img{
+    box-sizing: border-box;
+    padding: 3px;
+    max-height:168px;
+    width:320px;
+    border: solid 1px;
+    object-fit:cover;
+  }
+  .list__actions{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 200px;
+  }
+  
+ 
