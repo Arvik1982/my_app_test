@@ -1,10 +1,10 @@
-import { Dispatch } from "react";
-import store from "../store";
+import { Dispatch } from 'react';
+import store from '../store';
 
 export type IRootStoreType = ReturnType<typeof store.getState>;
 
 export type elementType = {
-  name: { common: string, isLiked:boolean };
+  name: { common: string; isLiked: boolean };
   capital: string;
   flags: {
     png: string;
@@ -15,13 +15,18 @@ export type elementType = {
   population: number;
 };
 
-export type nameType={
-  name:{
-    isLiked:boolean,
-    common:string
-  }
+export type nameType = {
+  name: {
+    isLiked: boolean;
+    common: string;
+  };
 };
 
 export interface propsInterface {
   setError: Dispatch<string>;
+  error: string;
 }
+
+export type listElPropType = {
+  el: elementType;
+};
