@@ -47,6 +47,7 @@ const countriesSlice = createSlice({
       state.listCountriesStore = tempArr;
     },
     setCountryClickDelete(state, action) {
+      state.filterOn ? (state.filterOn = false) : '';
       let name = action.payload.name.common;
       let tempArr: [] = JSON.parse(localStorage.getItem('listCountries') || '');
       let newArr = tempArr.filter((el: nameType) => {

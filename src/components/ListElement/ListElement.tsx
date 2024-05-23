@@ -52,24 +52,13 @@ export default function ListElement({ el }: listElPropType) {
           }}
         >
           <div>
-            {!el.name.isLiked && (
-              <img
-                onClick={() => {
-                  dispatch(setCountryClickLike(el.name.common));
-                }}
-                src={dLike}
-                alt="dislike"
-              />
-            )}
-            {el.name.isLiked && (
-              <img
-                onClick={() => {
-                  dispatch(setCountryClickLike(el.name.common));
-                }}
-                src={like}
-                alt="like"
-              />
-            )}
+            <img
+              onClick={() => {
+                dispatch(setCountryClickLike(el.name.common));
+              }}
+              src={!el.name.isLiked ? dLike : like}
+              alt="dislike"
+            />
           </div>
         </div>
         <button

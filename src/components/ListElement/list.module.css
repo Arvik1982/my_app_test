@@ -60,10 +60,12 @@
     object-fit:cover;
   }
   .list__actions{
+    position: relative;
     cursor: pointer;
     display: flex;
     flex-direction: column-reverse;
     gap: 200px;
   }
+
   
  
