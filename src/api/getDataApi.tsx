@@ -15,7 +15,9 @@ export default async function getDataApi(
     return listCountries;
   } catch (error) {
     if (error instanceof Error) {
-      error.message==='Failed to fetch'?setError('Server error: net connection failed'):setError(error.message);
+      error.message==='Failed to fetch'?
+      setError('Server error: Нет связи с сервером, попробуйте обновить страницу')
+      :setError(error.message);
       throw new Error(error.message);
     } else {
       setError("new server error");
