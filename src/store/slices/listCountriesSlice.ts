@@ -20,22 +20,22 @@ const countriesSlice = createSlice({
       state.listCountriesStore = action.payload;
     },
     setCountryFilterLiked(state) {
-      let tempArr: [] = JSON.parse(localStorage.getItem('listCountries') || '');
-      let newArr = tempArr.filter((el: nameType) => {
+      const tempArr: [] = JSON.parse(localStorage.getItem('listCountries') || '');
+      const newArr = tempArr.filter((el: nameType) => {
         return el.name.isLiked === true;
       });
       state.listCountriesStore = newArr;
       state.filterOn = true;
     },
     setCountryFilterAll(state) {
-      let tempArr: [] = JSON.parse(localStorage.getItem('listCountries') || '');
+      const tempArr: [] = JSON.parse(localStorage.getItem('listCountries') || '');
       state.listCountriesStore = tempArr;
       state.filterOn = false;
     },
     setCountryClickLike(state, action) {
       state.filterOn ? (state.filterOn = false) : '';
-      let name = action.payload;
-      let tempArr: [] = JSON.parse(localStorage.getItem('listCountries') || '');
+      const name = action.payload;
+      const tempArr: [] = JSON.parse(localStorage.getItem('listCountries') || '');
       tempArr.forEach((el: nameType) => {
         el.name.common === name
           ? el.name.isLiked === true
@@ -48,9 +48,9 @@ const countriesSlice = createSlice({
     },
     setCountryClickDelete(state, action) {
       state.filterOn ? (state.filterOn = false) : '';
-      let name = action.payload.name.common;
-      let tempArr: [] = JSON.parse(localStorage.getItem('listCountries') || '');
-      let newArr = tempArr.filter((el: nameType) => {
+      const name = action.payload.name.common;
+      const tempArr: [] = JSON.parse(localStorage.getItem('listCountries') || '');
+      const newArr = tempArr.filter((el: nameType) => {
         return el.name.common !== name;
       });
       localStorage.setItem('listCountries', JSON.stringify(newArr));

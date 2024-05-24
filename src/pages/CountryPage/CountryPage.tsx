@@ -14,9 +14,9 @@ export default function CountryPage({ setError }: propsInterface) {
   useEffect(() => {
     setError('');
     if (params.id) {
-      let tempArr: [] =
+      const tempArr: [] =
         listCountries.length !== 0 ? listCountries : JSON.parse(localStorage.getItem('listCountries') || '');
-      let newArr = tempArr.filter((el: nameType) => {
+      const newArr = tempArr.filter((el: nameType) => {
         return el.name.common === params.id;
       });
       setCountry(newArr);
