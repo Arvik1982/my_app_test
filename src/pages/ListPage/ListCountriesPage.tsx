@@ -6,6 +6,7 @@ import {
   setAllCountries,
   setCountryFilterAll,
   setCountryFilterLiked,
+  setFilterOn,
   setListCountriesStore,
 } from '../../store/slices/listCountriesSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -22,6 +23,7 @@ export default function ListCountriesPage({ setError, error }: propsInterface) {
   const countriesRenew = (): void => {
     localStorage.removeItem('listCountries');
     setRenewCountries(!renewCountries);
+    dispatch(setFilterOn(false));
   };
 
   useEffect(() => {

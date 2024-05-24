@@ -8,8 +8,7 @@ import { listElPropType } from '../../types/types';
 
 export default function ListElement({ el }: listElPropType) {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-
+  const dispatch = useDispatch();  
   const countryClick = (name: string): void => {
     navigate(`/country/${name}`);
   };
